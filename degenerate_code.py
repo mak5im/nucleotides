@@ -3,6 +3,7 @@
 from itertools import product # computes cartesian product of input iterables
 import os
 
+choice = 'Y'
 while choice == 'Y':
         seq = raw_input('Enter degenerate primer sequence: ').upper()
 
@@ -17,10 +18,10 @@ while choice == 'Y':
     
                  # iterate over cartesian product of all replacement tuples
     
-        for p in product(*replacements):
-                for index, replacement in zip(indexes, p): 
-                        l[index] = replacement
-                yield ''.join(l)
+                for p in product(*replacements):
+                        for index, replacement in zip(indexes, p): 
+                                l[index] = replacement
+                        yield ''.join(l)
 
         for perm in multi_replace(seq, degnuc):
                 print perm
