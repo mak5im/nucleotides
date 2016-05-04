@@ -27,7 +27,7 @@ while choice == 'Y':
                 print perm
                 
         choice = raw_input('Enter another sequence? \n(Y/N): ').upper()
-        if choice = 'N':
+        if choice == 'N':
                 os.system('exit')
         
         
